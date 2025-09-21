@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: front-end-deployment
+  labels:
+    app: front-end
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: front-end
+  template:
+    metadata:
+      labels:
+        app: front-end
+    spec:
+      containers:
+        - name: cv-adapter-front-end
+          image: cv-adapter-front-end
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 80
+      restartPolicy: Always
+      
