@@ -3,17 +3,21 @@ kind: Ingress
 metadata:
   name: cv-adapter-ingress
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/proxy-body-size: "10m"
+    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/cors-allow-origin: "*"
+    nginx.ingress.kubernetes.io/cors-allow-methods: "GET, POST, OPTIONS"
+    nginx.ingress.kubernetes.io/cors-allow-headers: "DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization"
 spec:
   ingressClassName: nginx
   rules:
     - http:
         paths:
-          - path: /api
+          - path: /api/
             pathType: Prefix
             backend:
               service:
-                name: back-end-service
+                name: backend-service
                 port:
                     number: 80
 
@@ -21,6 +25,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: front-end-service
+                name: frontend-service
                 port:
                   number: 80

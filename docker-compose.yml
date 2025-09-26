@@ -1,0 +1,12 @@
+services:
+  backend:
+    build:
+      context: ./back-end
+      dockerfile: Dockerfile
+    image: cv-adapter-backend
+
+  frontend:
+    build:
+      context: ./front-end
+      dockerfile: Dockerfile
+    image: cv-adapter-frontend
