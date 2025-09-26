@@ -75,3 +75,8 @@ textarea {
 .generate-button:hover {
     transform: scale(1.05);
 }
+
+.response-message {
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
