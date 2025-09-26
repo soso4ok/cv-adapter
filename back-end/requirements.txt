@@ -1,2 +1,6 @@
+pydantic-settings
+pydantic
+starlette
 fastapi
 uvicorn
+python-multipart
