@@ -18,3 +18,4 @@ class CVGenerateResponse(BaseModel):
         None,
         description="Path where the uploaded file was saved"
     )
+    adapted_cv_markdown: str
