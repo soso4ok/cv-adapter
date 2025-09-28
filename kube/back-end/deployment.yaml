@@ -27,3 +27,9 @@ spec:
           volumeMounts:
             - name: cv-data
               mountPath: /data
+          env:
+            - name: GEMINI_AI_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: gemini-api-key
+                  key: api-key
