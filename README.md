@@ -370,25 +370,6 @@ kubectl scale deployment backend-deployment --replicas=3
 kubectl scale deployment frontend-deployment --replicas=2
 ```
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🆘 Support
-
-For issues and questions:
-- Create an issue in the repository
-- Check the troubleshooting section
-- Review the API documentation at `/docs`
-
 ---
 
 **Note**: This application requires a valid Google Gemini AI API key to function. Ensure you have proper API access and billing configured with Google Cloud.
